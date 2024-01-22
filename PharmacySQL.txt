@@ -1,0 +1,26 @@
+use [PharmacyDB]
+
+create table Pharmacies (
+    PharmacyId int identity(1,1) primary key,
+    Name nvarchar(max) not null check (Name <> ''),
+    PhoneNumber nvarchar(20) not null,
+    Email nvarchar(100) not null,
+    Address nvarchar(100) not null
+)
+
+create table Products (
+    ProductId int identity(1,1) primary key,
+    Name nvarchar(max) not null check (Name <> '')
+)
+
+create table PharmacyProduct(
+    PharmacyId int,
+    ProductId int,
+    primary key (PharmacyId, ProductId),
+    foreign key (PharmacyId) references Pharmacies(PharmacyId),
+    foreign key (ProductId) references Products(ProductId)
+)
+
+declare @ProductName nvarchar(max) = 'MAGA';
+
+select P.PharmacyId, P.Name as PharmacyName, P.PhoneNumber, P.Email, P.Address, PR.ProductId, PR.Name as ProductName from Pharmacies as P join PharmacyProduct as PP on P.PharmacyId = PP.PharmacyId join Products as PR on PP.ProductId = PR.ProductId where PR.Name = @ProductName;
