@@ -5,7 +5,8 @@ create table Pharmacies (
     Name nvarchar(max) not null check (Name <> ''),
     PhoneNumber nvarchar(20) not null,
     Email nvarchar(100) not null,
-    Address nvarchar(100) not null
+    Address nvarchar(500) not null,
+    City nvarchar(100) not null,
 )
 
 create table Products (
