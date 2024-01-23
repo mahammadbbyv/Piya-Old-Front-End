@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import './App.css'
-
-import Main from './HomePage/Main'
-import Footer from './HomePage/Footer'
-import Header from './HomePage/Header'
+import './components/styles/Header.css'
+import {Routes, Route } from 'react-router-dom'
+import Main from './components/Main.jsx'
+import Search from './components/Search.jsx'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,7 +12,10 @@ function App() {
   return (
     <>
     <Header />
-    <Main />
+    <Routes>
+      <Route path='/' element={<Main />}/>
+      <Route path='/search' element={<Search />}/>
+    </Routes>
     <Footer />
     </>
   )

@@ -1,4 +1,4 @@
-function Map(){
+function Search(){
 
     return(
         <>
@@ -6,4 +6,4 @@ function Map(){
     )
 }
 
-export default Map
+export default Search
