@@ -11,19 +11,25 @@
 }
 
 #root{
-    --text-color: #0E0C26;
+    --text-color: #2B2A2A;
+    --text-color-transparent: #2b2a2a5d;
     --bg-color: #EEEEEE;
     --main-color: #9CFFAC;
+    --main-dark-color: #6FAF79;
     --second-color: #FFFFFF;
+    --tw-backdrop-blur: blur(24px);
 }
 
 .header{
+    backdrop-filter: var(--tw-backdrop-blur);
     height: 100px;
     display: flex;
     justify-content: space-between;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    gap: 350px;
+    background: var(--text-color-transparent);
 }
 
 .navbar{
@@ -32,6 +38,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 45px;
+    font-size: 18px;
 }
 
 .i-logo-image{
@@ -44,4 +52,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: var(--text-color);
+}
+
+a{
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+a:hover{
+    color: var(--text-color-transparent);
 }
