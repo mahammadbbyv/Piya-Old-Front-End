@@ -8,12 +8,10 @@ function PharmacyEditor(){
     const [email, setEmail] = useState('')
     const [address, setAddress] = useState('')
     const [city, setCity] = useState('')
-    function handleChange(val, error, regex, set){
-        // regex for name validation
-        if(!regex.test(val)){
-            alert(error)
-        }else{
+    function handleChange(val, regex, set, par){
+        if(regex.test(val)){
             set(val)
+            val = par
         }
     }
     return(
@@ -23,14 +21,14 @@ function PharmacyEditor(){
             
             <div className='pharmacy-inputs-wrapper'>
                 <div className='input-box'>
-                    <input type='text' placeholder='Pharmacy Name...' onChange={(ev) => (handleChange(ev.target.value, "Name must be letters only", /^[A-Za-z\s]+$/, setName))}/>
-                    <input type='tel' placeholder='Phone Number...' onChange={(ev) => (handleChange(ev.target.value, "Phone number must be numbers only", /^\+\d{1,19}$/, setPhone))}/>
-                    <input type='email' placeholder='E-Mail...' onChange={(ev) => (handleChange(ev.target.value, "Invalid E-Mail", /^[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]+$/, setEmail))}/>
+                    <input type='text' placeholder='Pharmacy Name...' value={name} onChange={(ev) => (handleChange(ev.target.value, /^[A-Za-z\s]*$/, setName, name))}/>
+                    <input type='tel' placeholder='Phone Number...' value={phone} onChange={(ev) => (setPhone(ev.target.value))}/>
+                    <input type='email' placeholder='E-Mail...' value={email} onChange={(ev) => (setEmail(ev.target.value))}/>
                 </div>
 
                 <div className='input-box'>
-                    <input type='text' placeholder='Address' onChange={(ev) => (handleChange(ev.target.value, /^[A-Za-z0-9]+$/, setAddress))}/>
-                    <input type='text' placeholder='City' onChange={(ev) => (handleChange(ev.target.value, /^[A-Za-z]+$/, setCity))}/>
+                    <input type='text' placeholder='Address' value={address} onChange={(ev) => (setAddress(ev.target.value))}/>
+                    <input type='text' placeholder='City' value={city} onChange={(ev) => (handleChange(ev.target.value, /^[A-Za-z]+$/, setCity))}/>
                 </div>
                 
                 <div className='submit-button'>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import parse from 'html-react-parser';
+import './styles/Pharmacies.css'
 
 function Pharmacies({product}){
     const [results, setResults] = useState([])
@@ -20,8 +21,14 @@ function Pharmacies({product}){
         <div className="pharmacies-results">
             {results.map((item) => (
                 <div className="pharmacy" key={item.id} >
-                    {parse(item.address)}
-                    <hr />
+                  <div className="pharmacy-info">
+                    <h2>{item.name}</h2>
+                    <div className="pharmacy-contact">
+                      <p>{item.email}</p>
+                      <p>{item.phoneNumber}</p>
+                    </div>
+                  </div>
+                  {parse(item.address)}
                 </div>
             ))}
         </div>

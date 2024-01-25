@@ -24,39 +24,18 @@
 
 .search-container{
     min-width: 200px;
-    padding-top: 20vh;
+    padding-top: 5vh;
     width: 40%;
-    margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-/* .search-box{
-    height: 30px;
-    display: flex;
-    cursor: pointer;
-    padding: 10px 20px;
-    background-color: var(--bg-color);
-    border-radius: 30px;
-    align-items: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+.search-input-box{
+    width: 60%;
+    margin-left: 1.5rem;
 }
 
-.search-box:hover input{
-    width: 400px;
+.search-results{
+    margin-left: 1.5rem;
+    width: 60%;
 }
-
-.search-box input{
-    width: 0;
-    outline: none;
-    border: none;
-    font-weight: 400;
-    transition: 0.8s;
-    background: transparent;
-}
-
-.search-box a img{
-    width: 16px;
-    height: 16px;
-} */

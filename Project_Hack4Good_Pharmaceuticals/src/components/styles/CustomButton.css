@@ -19,12 +19,15 @@
 }
 
 .btn{
+    display: flex;
     padding: 10px 20px;
     background: var(--second-color);
     color: var(--text-color);
     font-weight: 700;
     border: var(--main-color) 3px solid;
     border-radius: 25px;
+    align-items: center;
+    justify-items: center;
 }
 
 .btn:hover{

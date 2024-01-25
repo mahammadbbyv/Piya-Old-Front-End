@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import SearchBar from "./SearchBar"
 import SearchResultsList from "./SearchResultsList"
 import './styles/SearchPharmaceuticals.css'
+import { motion } from "framer-motion"
 
 function SearchPharmaceuticals({setProduct}){
     const [search, setSearch] = useState('')
@@ -22,10 +23,12 @@ function SearchPharmaceuticals({setProduct}){
     }, [search])
 
     return(
-        <div className="search-container">
-            <SearchBar setSearch={setSearch}/>
+      <div className="search-container">
+          <SearchBar setSearch={setSearch} />
+          <div className="search-results">
             {results && results.length > 0 && <SearchResultsList results={results} setProduct={setProduct} />}
-        </div>
+          </div>
+      </div>
     )
 }
 
