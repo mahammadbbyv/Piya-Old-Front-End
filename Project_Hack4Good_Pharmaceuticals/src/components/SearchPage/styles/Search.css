@@ -22,8 +22,9 @@
 }
 
 .search-pharms{
-    margin-top: 9%;
-    min-height: 64.01%;
-    width: 30%;
+    margin-top: 5%;
+    min-height: 68%;
+    width: 100%;
     text-align: center;
+    background: var(--neutral-color);
 }

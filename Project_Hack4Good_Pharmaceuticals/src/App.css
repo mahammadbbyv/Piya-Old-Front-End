@@ -2,6 +2,15 @@
   height: 100%;
   width: 100%;
   text-align: center;
+  --text-color: #2f313f;
+  --text-color-transparent: #2f313f4c;
+  --bg-color: #EEEEEE;
+  --main-color: #9CFFAC;
+  --main-dark-color: #6FAF79;
+  --second-color: #FFFFFF;
+  --tw-backdrop-blur: blur(24px);
+  --neutral-color: #061a371b;
+  --text-light-color: #121d2b99;
 }
 
 header, footer{

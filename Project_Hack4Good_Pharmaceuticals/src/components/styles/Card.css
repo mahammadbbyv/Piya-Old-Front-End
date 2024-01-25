@@ -18,14 +18,14 @@
     --main-dark-color: #6FAF79;
     --second-color: #FFFFFF;
     --tw-backdrop-blur: blur(24px);
-    --neutral-color: #061a371b;
+    --card-color: #23ba8f2b;
     --text-light-color: #121d2b99;
 }
 
 .card{
     padding: 1.5rem;
     border-radius: 1rem;
-    background-color: var(--neutral-color);
+    background: var(--card-color);
     overflow: hidden;
     user-select: none;
     width: 100%;

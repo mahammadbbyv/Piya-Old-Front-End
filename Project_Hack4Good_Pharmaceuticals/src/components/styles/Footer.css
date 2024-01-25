@@ -24,7 +24,7 @@
 }
 
 footer{
-    display: block;
+    flex: 0 1 40px;
     position: relative;
     bottom: 0;
     z-index: 1000;
