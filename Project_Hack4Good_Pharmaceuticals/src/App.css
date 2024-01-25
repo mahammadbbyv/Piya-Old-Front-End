@@ -11,7 +11,7 @@ header,footer,main{
   width: 100%;
 }
 main{
-  height: 60%;
+  min-height: 60%;
 }
 
 body, html{

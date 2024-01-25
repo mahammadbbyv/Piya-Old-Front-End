@@ -61,6 +61,7 @@
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
+    padding-right: 20px;
     line-height: 1.5rem;
     color: var(--text-light-color);
     font-weight: 400;
@@ -96,7 +97,7 @@
     }
 
     .card-img{
-        max-width: 130px;
-        max-height: 130px;
+        max-width: 150px;
+        max-height: 150px;
     }
 }

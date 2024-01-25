@@ -13,6 +13,7 @@
 #root{
     --text-color: #2B2A2A;
     --text-color-transparent: #2b2a2a5d;
+    --text-color-light-transparent: #ffffff2d;
     --bg-color: #EEEEEE;
     --main-color: #9CFFAC;
     --main-dark-color: #6FAF79;
@@ -22,14 +23,18 @@
 
 .header{
     backdrop-filter: var(--tw-backdrop-blur);
-    height: 100px;
+    height: 9%;
+    width: 100%;
+    margin-bottom: 20px;
     display: flex;
+    position: fixed;
     justify-content: space-between;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     gap: 350px;
-    background: var(--text-color-transparent);
+    background: var(--text-color-light-transparent);
+    z-index: 500;
 }
 
 .navbar{
