@@ -4,9 +4,18 @@ import drugs from '../assets/drugs.png'
 import location from '../assets/location.png'
 import pharmacy from '../assets/pharmacy.png'
 import caduceus from '../assets/caduceus.png'
+import restore from '../assets/restore.png'
 function Main(){
     return (
         <main>
+            <div className="landing-container">
+                <img className="landing-icon" src={restore}/>
+                <div className="landing-text">
+                    <h2 className="landing-title">About</h2>
+                    <p className="landing-content"></p>
+                </div>
+            </div>
+
             <div className="cards-container">
                 <div className="cards">
                     <h1 className="cards-title">Our Services</h1>
