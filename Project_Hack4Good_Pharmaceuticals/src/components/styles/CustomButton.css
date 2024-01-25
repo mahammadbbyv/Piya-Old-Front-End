@@ -28,5 +28,6 @@
 }
 
 .btn:hover{
-    background: var(--main-dark-color);
+    background: var(--main-color);
+    color: var(--text-color);
 }

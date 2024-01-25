@@ -6,15 +6,17 @@ import ProductList from './ProductList.jsx'
 function Admin(){
     return(
         <>
-        <div className='admin-container'>
-            <div className='admin-editors'>
-                <PharmacyEditor />
-                <ProductEditor />
+        <main>
+            <div className='admin-container'>
+                <div className='admin-editors'>
+                    <PharmacyEditor />
+                    <ProductEditor />
+                </div>
+                <div className='admin-list'>
+                    <ProductList />
+                </div>
             </div>
-            <div className='admin-list'>
-                <ProductList />
-            </div>
-        </div>
+        </main>
         </>
     )
 }

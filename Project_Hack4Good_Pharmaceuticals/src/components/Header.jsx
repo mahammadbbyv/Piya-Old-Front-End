@@ -11,7 +11,7 @@ function Header(){
             </Link>
             <ul className="navbar">
                 <li className="search-btn"><Link to={"/search"}>🔍  Search</Link></li>
-                <li><CustomButton text={"Join"} linkText={"/"}/></li>
+                <li><CustomButton text={"Join"} linkText={"login"}/></li>
             </ul>
         </div>
     )

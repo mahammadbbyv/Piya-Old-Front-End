@@ -7,9 +7,7 @@ function Pharmacies({product}){
         const getData = async () => {
           try {
             if(product.length == 0) return setResults([])
-            console.log(product);
             const res = await fetch(`https://magab17-001-site1.ltempurl.com/getPharmacies/Baku/${product}`)
-            console.log(res);
             const data = await res.json()
             return setResults(data)
           } catch (err) {
