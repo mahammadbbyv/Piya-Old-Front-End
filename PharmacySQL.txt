@@ -7,7 +7,6 @@ create table Pharmacies (
     Email nvarchar(100) not null,
     Password nvarchar(150) not null,
     IsEmailVerified bit not null,
-    IsPhoneNumberVerified bit not null,
     IsPharmacyVerified bit not null,
     Address nvarchar(500) not null,
     City nvarchar(100) not null,
@@ -59,7 +58,7 @@ declare @NewEmail nvarchar(100) = '';
 declare @NewPassword nvarchar(150) = '';
 declare @NewPhoneNumber nvarchar(20) = '';
 
-insert into Pharmacies (Name, PhoneNumber, Email, Password, IsEmailVerified, IsPhoneNumberVerified, IsPharmacyVerified, Address, City) values ('', @NewPhoneNumber, @NewEmail, @NewPassword, false, false, false, '', '');
+insert into Pharmacies (Name, PhoneNumber, Email, Password, IsEmailVerified, IsPharmacyVerified, Address, City) values ('', @NewPhoneNumber, @NewEmail, @NewPassword, false, false, '', '');
 
 --Select all products pharmacy
 declare @PharmacyId int = 0;
