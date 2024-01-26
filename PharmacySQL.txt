@@ -2,7 +2,7 @@ use [PharmacyDB]
 
 create table Pharmacies (
     PharmacyId int identity(1,1) primary key,
-    Name nvarchar(max) not null check (Name <> ''),
+    Name nvarchar(max),
     PhoneNumber nvarchar(20) not null,
     Email nvarchar(100) not null,
     Password nvarchar(150) not null,
