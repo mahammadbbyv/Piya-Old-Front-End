@@ -7,8 +7,8 @@ function Footer(){
                 <div className="footer-container">
                     <div className="footer-box">
                         <h3>Instagram</h3>
-                        <a href="#">Mahammad Babayev</a>
-                        <a href="#">Murad Orujov</a>
+                        <a href="https://www.instagram.com/idc_anymore_bruv/">Mahammad Babayev</a>
+                        <a href="https://www.instagram.com/murado_06/">Murad Orujov</a>
                     </div>
 
                     <div className="footer-box">

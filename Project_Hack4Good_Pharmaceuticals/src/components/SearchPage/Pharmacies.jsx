@@ -4,6 +4,7 @@ import './styles/Pharmacies.css'
 
 function Pharmacies({product}){
     const [results, setResults] = useState([])
+    
     useEffect(() =>{
         const getData = async () => {
           try {
@@ -17,15 +18,18 @@ function Pharmacies({product}){
         }
         getData()
     }, [product])
+    
     return(
         <div className="pharmacies-results">
             {results.map((item) => (
                 <div className="pharmacy" key={item.id} >
                   <div className="pharmacy-info">
-                    <h2>{item.name}</h2>
+                    <div className="pharmacy-title">
+                      <h2>{item.name}</h2>
+                    </div>
                     <div className="pharmacy-contact">
                       <p>{item.email}</p>
-                      <p>{item.phoneNumber}</p>
+                      <p>+{item.phoneNumber}</p>
                     </div>
                   </div>
                   {parse(item.address)}
