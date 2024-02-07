@@ -7,6 +7,7 @@ import Admin from './components/AdminPanel/Admin.jsx'
 import Login from './components/LoginRegistration/Login.jsx'
 import Register from './components/LoginRegistration/Register.jsx'
 import PageNotFound from './components/404page.jsx'
+import Verify from './components/LoginRegistration/VerifyEmail.jsx'
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/admin' element={<Admin/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/verifyEmail' element={<Verify/>}/>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer/>

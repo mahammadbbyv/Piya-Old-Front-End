@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom"
 import "./styles/CustomButton.css"
-import parse from 'html-react-parser';
 
-function CustomButton({text, linkText}){
+function CustomButton({text, linkText, func = null, email = null, phoneNumber = null, password = null, confirmPassword = null}){
     return(
         <>
-            <Link className="btn" to={`/${linkText}`}>{text}</Link>
+            <Link className="btn" to={`/${linkText}`} onClick={() =>{
+                if(func != null){
+                    if(confirmPassword != null){
+                        func(email, phoneNumber, password, confirmPassword);
+                    }else{
+                        func(email, password);
+                    }
+                }
+            }}>{text}</Link>
         </>
     )
 }
