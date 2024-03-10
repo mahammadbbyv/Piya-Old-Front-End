@@ -7,10 +7,11 @@ import { motion } from "framer-motion"
 function SearchPharmaceuticals({setProduct}){
     const [search, setSearch] = useState('')
     const [results, setResults] = useState([])
-    
+
     useEffect(() =>{
         const getData = async () => {
           try {
+            console.log(search);
             if(search.length == 0) return setResults([])
             const res = await fetch(`https://magab17-001-site1.ltempurl.com/getProducts/${search}`)
             const data = await res.json()

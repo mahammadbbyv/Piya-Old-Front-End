@@ -64,15 +64,20 @@ function Admin(){
                 await axios.get(`https://magab17-001-site1.ltempurl.com/getPharmacy?token=${cookies.token}`)
                 .then(res => {
                     if(res.data.ok){
+                        let phoneNumber = res.data.res.PhoneNumber.replace(' ', '')
+                        if(!phoneNumber[0] == '+'){
+                            phoneNumber = `+${phoneNumber}`
+                        }
                         setPharmacy({
                             id: res.data.res.Id,
                             name: res.data.res.Name,
-                            phone: `+${res.data.res.PhoneNumber}`,
+                            phone: phoneNumber,
                             email: res.data.res.Email,
                             address: res.data.res.Address,
                             city: res.data.res.City,
                             isVerified: res.data.res.IsVerified
                         })
+                        console.log(phoneNumber)
                         setReload(!reload)
                         return;
                     }else{

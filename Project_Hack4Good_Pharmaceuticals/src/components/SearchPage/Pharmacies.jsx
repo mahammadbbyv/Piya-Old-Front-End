@@ -9,18 +9,12 @@ function Pharmacies({product}){
     const [resultsCity, setResultsCity] = useState([])
     const [city, setCity] = useState('')
     const [search, setSearch] = useState('')
-    const [cookies, setCookie] = useCookies(['city'])
+    const [cookies, setCookie] = useCookies()
     useEffect(() =>{
         const getData = async () => {
           try {
             if(product.length == 0 || city.length == 0) return setResults([])
-            if(city.length == undefined) {
-              navigator.geolocation.getCurrentPosition(pos=>{
-                const {latitude,longitude} = pos.coords;
-                const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
-                fetch(url).then(res=>res.json()).then(data=>setCity(data.address.city))
-              })
-            }
+            console.log(`https://magab17-001-site1.ltempurl.com/getPharmacies/${city}/${product}`)
             const res = await fetch(`https://magab17-001-site1.ltempurl.com/getPharmacies/${city}/${product}`)
             const data = await res.json()
             return setResults(data)
@@ -29,7 +23,7 @@ function Pharmacies({product}){
           }
         }
         getData()
-    }, [city])
+    }, [city, product])
     
     return(
       

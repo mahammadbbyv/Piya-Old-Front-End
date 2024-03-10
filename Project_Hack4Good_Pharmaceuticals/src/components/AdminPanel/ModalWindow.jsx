@@ -90,7 +90,7 @@ function ModalWindow({setShowModal, showModal, pharmacy, setPharmacy}){
                         setPharmacy(
                         {
                             ...pharmacy,
-                            name: phoneNumber
+                            phone: phoneNumber
                         }) 
                         setShowModal(0)}}>Submit</button>
                 </div>
